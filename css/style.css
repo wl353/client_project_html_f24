@@ -1,15 +1,16 @@
 #skip {
     position: absolute;
     top: -40px;
+    color: black;
  }
- 
+
 #skip:focus {
     top: 20px;
  }
  
- :focus {
-   border-width: 2px;
-   border-style: solid;
+:focus {
+    border: 5px solid black;
+    background-color: white;
  }
  
 body {
@@ -17,86 +18,213 @@ body {
     color: #655A52;
 }
 
-header img {
-    width: 50%;
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5%;
+    /* margin: 5%; */
+    
 }
+
+header img {
+    grid-column: 1 / span 1;
+    margin: auto;
+    margin-left: 25%;
+    padding: 5%;
+}
+
 nav {
     font-size: 35px;
+    grid-column: 2 / span 3; 
 }
 
 h1 {
-    font-size: 48px;
+    grid-column: 1 / span 4;
+    
+}
+
+nav ul {
+    display: grid;
+    grid-gap: 5%;
+    margin: 10%;
+}
+
+nav ul li {
+    border: solid 3px black;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    border-radius: 25px;
+    padding: 5%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: black;
+}
+
+nav ul li .active {
+    background-color: #00274C;
+    border-radius: 25px;
+    color: white;
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2em;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
-    color: #00274C
+    color: #00274C;
+    padding: 5%;
+    margin-bottom: 5%;
+    background-color: #c3c0bf;
+    /* border-radius: 45px; */
 }
 
 h2 {
-    font-size: 35px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #655A52;
+    margin: 5%;
+    text-align: center;
+    /* border: 2px solid #00274C; */
+    font-style: italic;
 }
 
 h3 {
-    font-size: 28px;
+    font-size: 1.3em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #655A52;
+    margin: 2%;
+    text-align: center;
+    font-weight: bold;
 }
 
-p {
-    /* line-height: 25px; */
-    font-size: 28px;
-    /* border: 1px solid black; */
-    margin: 12px;
+figcaption {
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-img {
-    border: 8px solid #00274C;
-    padding: 16px;
-    margin: 16px;
-    border-top-right-radius: 30px;
+p, ul, ol {
+    font-size: 1.3em;
+    margin: 5%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 ul, ol {
-    display: inline-block;
-    margin-left: 50px;
-    font-size: 25px;
+    list-style-type: disc;
+    /* padding: 5%; */
+    margin: 8%;
+}
+li {
+    margin: 2%;
+}
+strong {
+    font-weight: bold;
+}
+
+img {
+    border: 5px solid #00274C;
+    padding: 3%;
+    margin: 3%;
+    border-top-right-radius: 30px;
+    text-align: center;
+}
+
+#mental-health-resources {
+    display: grid;
+    margin: 10px;
+    font-size: 1em;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3%;
+}
+
+#mental-health-resources article {
+    border: 2px solid #00274C;
+    border-radius: 20px;
+}
+
+footer {
+    background-color: #00274C;
+    color: white;
+    padding: 10%;
+    text-align: center;
+}
+
+footer a {
+    color:#FFCB05;
+    text-decoration: underline;
 }
 
 
-
 @media screen and (min-width: 800px) {
-    body {
-        background-color: #FFCB05;
-        color: #655A52;
+    
+    header {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    
+    header img {
+        width: 100px;
+    }
+    
+    nav {
+        grid-column: 2 / span 4; 
+        height: 20vh;
     }
     
     h1 {
-        font-size: 65px;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        text-align: center;
-        color: #00274C
+        grid-column: 1 / span 5;
+        font-size: 3em;
+        padding: 2%;
+        margin-bottom: 2%;
+    }
+    
+    nav ul {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin-top: 5vh;
+        grid-gap: 3%;
     }
     
     h2 {
-        font-size: 42px;
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        color: #655A52;
+        font-size: 2em;
+        margin: 0%;
     }
     
-    p {
-        line-height: 25px;
+    h3 {
+        font-size: 1.8em;
+        margin: 0%;
     }
+    
+    figcaption {
+        font-size: 1.5em;
+    }
+    
+    p, ul, ol {
+        font-size: 1.5em;
+        margin: 2%;
+        
+    }
+    
     
     img {
-        border: 8px solid #00274C;
-        padding: 16px;
-        margin: 16px;
-        border-top-right-radius: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 70vw;
+        margin: auto;      
+        padding: 3%;
     }
     
-    ul, ol {
-        display: inline-block;
-        margin-left: 50px;
+    #mental-health-resources {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+    
+    
+    footer {
+        padding: 5%;
+    }
+    
     
 }
 

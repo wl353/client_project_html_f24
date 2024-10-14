@@ -140,7 +140,7 @@ img {
     grid-gap: 3%;
 }
 
-#mental-health-resources article {
+#mental-health-resources div {
     border: 2px solid #00274C;
     border-radius: 20px;
 }

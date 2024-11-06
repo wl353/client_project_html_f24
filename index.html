@@ -100,11 +100,49 @@
                 <li><strong>Housing and Dining:</strong> Find information on on-campus housing options and dining services to ensure a comfortable living experience.</li>
             </ul>
         </section>
+
+
+
+        <h2>Would you like to subscribe to our newsletter?</h2>
+        
+        <!-- Connect to formspree.io-->
+        <form action="https://formspree.io/f/mwpkooqo" method="POST">
+            <fieldset>
+                <div id="check">
+                    <label for="subscribe">Check to enter email address:
+                    <input type="checkbox" name="subscribe" id="subscribe" onclick = showEmailDiv(this)>
+                    </label>
+                </div>
+
+                <div id="emailDiv">
+                    
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" required>
+
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                
+                    <input type="submit" value="Submit">
+                </div>
+            </fieldset>
+        </form>
         
 
     </main>
     <footer>
-        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
-        </footer>
+        <p>© Copyrights <span id="year"></span> by UMSI. All rights reserved.</p>
+        <p>333 Maynard, Suite 500, Ann Arbor, MI 48104 | (734) 647-9922 </a></p>
+    </footer>
+
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+        function showEmailDiv() {
+            document.getElementById("emailDiv").style.display = "block";
+            document.getElementById("check").style.display = "none";
+        }
+    </script>
 </body>
 </html>

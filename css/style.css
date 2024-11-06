@@ -1,3 +1,4 @@
+/* skip */
 #skip {
     position: absolute;
     top: -40px;
@@ -6,18 +7,20 @@
 
 #skip:focus {
     top: 20px;
- }
- 
+}
+
 :focus {
     border: 5px solid black;
     background-color: white;
- }
- 
+}
+
+/* body */
 body {
     background-color: #FFCB05;
     color: #655A52;
 }
 
+/* header */
 header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -70,6 +73,7 @@ nav ul li .active {
     font-weight: bold;
 }
 
+
 h1 {
     font-size: 2em;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -78,7 +82,6 @@ h1 {
     padding: 5%;
     margin-bottom: 5%;
     background-color: #c3c0bf;
-    /* border-radius: 45px; */
 }
 
 h2 {
@@ -87,7 +90,6 @@ h2 {
     color: #655A52;
     margin: 5%;
     text-align: center;
-    /* border: 2px solid #00274C; */
     font-style: italic;
 }
 
@@ -114,7 +116,6 @@ p, ul, ol {
 
 ul, ol {
     list-style-type: disc;
-    /* padding: 5%; */
     margin: 8%;
 }
 li {
@@ -130,6 +131,7 @@ img {
     margin: 3%;
     border-top-right-radius: 30px;
     text-align: center;
+    width: 80%;
 }
 
 #mental-health-resources {
@@ -145,6 +147,63 @@ img {
     border-radius: 20px;
 }
 
+/* form */
+form {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    background-color: #00274C; 
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: white; 
+
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    position: relative;
+    top: 8px;
+}
+
+#check {
+    display: flex;
+    justify-content: center;
+}
+
+input[type="text"], input[type="email"]{
+    background-color: white;
+    color:black;
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+
+input[type="submit"] {
+    text-align: center;
+    background-color: #FFCB05; 
+    color: #00274C; 
+    padding: 10px;
+    border-radius: 15px;
+    width: 100%;
+}
+  
+
+/* footer */
 footer {
     background-color: #00274C;
     color: white;
@@ -155,6 +214,34 @@ footer {
 footer a {
     color:#FFCB05;
     text-decoration: underline;
+}
+
+
+/* 404 page */
+#links-404 {
+    display: flex;
+    justify-content: space-around;
+}
+
+#links-404 li {
+    border: solid 3px black;
+    display: block;
+    text-align: center;
+    border-radius: 25px;
+    padding: 2%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: black;
+}
+
+#links-404 :hover {
+    background-color: #00274C;
+    color: white;
+    text-decoration: underline;
+}
+
+#emailDiv{
+	display: none;
 }
 
 
